@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.toolbar{
+    background-color: #0d6efd;
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    justify-content: space-between;
+}
+.title{
+    color:white;
+}
+.spacer{
+    margin-top: 1rem;
+}

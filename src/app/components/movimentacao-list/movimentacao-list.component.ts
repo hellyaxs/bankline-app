@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CorretistaService } from 'src/app/services/corretista.service';
 import { MovimentacaoService } from 'src/app/services/movimentacao.service';
 
 @Component({
@@ -8,24 +9,55 @@ import { MovimentacaoService } from 'src/app/services/movimentacao.service';
 })
 export class MovimentacaoListComponent implements OnInit {
 
-  movimentacoes!:any;
+ 
+  movimentacoes:any;
+  correntistas:any;
+  correntista:any={};
 
-  constructor(private movimentacaoServide: MovimentacaoService) { }
+  constructor(private movimentacaoServide: MovimentacaoService,
+              private correntistaService: CorretistaService
+    
+    ) { }
 
   ngOnInit(): void {
-    this.listMovimentacoes();
+    this.exibirCorrentistas();
+
   }
 
-  listMovimentacoes():void{
+  listeTeste():void{
     this.movimentacaoServide.list()
-    .subscribe(
-      data=>{
-        this.movimentacoes=data;
-        console.log(data);
-      },
-      error=>{
-        console.log(error);
-      });
+      .subscribe(
+        data => {
+          this.movimentacoes = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+  listMovimentacoes(): void {
+    this.movimentacaoServide.findByIdConta(this.correntista.id)
+      .subscribe(
+        data => {
+          this.movimentacoes = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+  exibirCorrentistas(): void {
+    this.correntistaService.list()
+      .subscribe(
+        data => {
+          this.correntistas = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
   }
 
 }
