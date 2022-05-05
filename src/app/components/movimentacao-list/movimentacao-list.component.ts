@@ -24,17 +24,7 @@ export class MovimentacaoListComponent implements OnInit {
 
   }
 
-  listeTeste():void{
-    this.movimentacaoServide.list()
-      .subscribe(
-        data => {
-          this.movimentacoes = data;
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
-  }
+  
 
   listMovimentacoes(): void {
     this.movimentacaoServide.findByIdConta(this.correntista.id)

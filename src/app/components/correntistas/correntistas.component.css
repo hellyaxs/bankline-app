@@ -1,0 +1,11 @@
+.cartao{
+    display: flex;
+    flex-wrap: wrap ;
+}
+.card-body{
+    width: 12rem;
+    border: solid rgb(43, 42, 42) 0.1px;
+    border-radius: 12px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}

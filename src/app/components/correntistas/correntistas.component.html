@@ -19,8 +19,8 @@
       </div>
     </div>
     <p></p>
-    <div *ngFor="let item of correntistas; index as i" class="card" style="width: 18rem;">
-      <div class="card-body">
+    <div  class="cartao">
+      <div class="card-body" *ngFor="let item of correntistas; index as i">
         <h5 class="card-title">{{item.nome}}</h5>
         <p class="card-text">Conta N° {{item.conta.numero}}</p>
         <p class="card-text">Saldo {{item.conta.saldo | currency:'BRL'}}</p>
