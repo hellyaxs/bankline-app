@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MovimentacaoListComponent } from './components/movimentacao-list/movimentacao-list.component';
 import { MovimentacaoNewComponent } from './components/movimentacao-new/movimentacao-new.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { MovimentacaoNewComponent } from './components/movimentacao-new/moviment
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
