@@ -13,7 +13,7 @@
 docker-compose.debug.yml
 # profiling files
 chrome-profiler-events*.json
-
+karma.conf.js
 # IDEs and editors
 /.idea
 .project
@@ -30,6 +30,9 @@ chrome-profiler-events*.json
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+tsconfig.json
+tsconfig.app.json
+tsconfig.spec.json
 
 # misc
 /.sass-cache
@@ -44,4 +47,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-nginx.conf
+
