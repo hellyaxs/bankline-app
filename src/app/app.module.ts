@@ -12,6 +12,7 @@ import { registerLocaleData } from '@angular/common';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { CorrentistasComponent } from './components/correntistas/correntistas.component';
 import  localesPt  from '@angular/common/locales/pt';
+import { LoginComponent } from './login/login.component';
 
 registerLocaleData( localesPt )
 
@@ -20,7 +21,8 @@ registerLocaleData( localesPt )
     AppComponent,
     MovimentacaoListComponent,
     MovimentacaoNewComponent,
-    CorrentistasComponent
+    CorrentistasComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

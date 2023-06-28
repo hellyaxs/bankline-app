@@ -6,10 +6,11 @@
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
-
+.tool-versions
 # dependencies
 /node_modules
-
+.vscode/
+docker-compose.debug.yml
 # profiling files
 chrome-profiler-events*.json
 
