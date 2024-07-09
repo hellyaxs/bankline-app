@@ -6,7 +6,7 @@ import ECommerce from './pages/Dashboard/ECommerce';
 import SignIn from './pages/Authentication/SignIn';
 import SignUp from './pages/Authentication/SignUp';
 import Loader from './common/Loader';
-import routes from './routes';
+import routes from './utils/routes';
 
 const DefaultLayout = lazy(() => import('./layout/DefaultLayout'));
 
